@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>车载视觉 · Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <style>
+      :root {
+        --tc-background: #FFFFFF;
+        --tc-foreground: #1C1C1C;
+        --tc-card: #FFFFFF;
+        --tc-border: #E8E8E8;
+        --tc-muted: #78716C;
+        --tc-light-bg: #F8F8F8;
+        --tc-footer-bg: #1C1C1C;
+        --tc-primary: #FF7A1A;
+        --tc-primary-light: #FFF0E0;
+        --tc-primary-soft: #FFE8D0;
+        --tc-badge-bg: #FFF0E0;
+        --tc-badge-text: #FF7A1A;
+        --tc-white: #FFFFFF;
+        --tc-radius-sm: 8px;
+        --tc-radius-md: 12px;
+        --tc-radius-lg: 16px;
+        --tc-radius-xl: 16px;
+        --tc-radius-full: 9999px;
+        --tc-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        --tc-shadow-card: 0 2px 8px rgba(0, 0, 0, 0.05);
+        --tc-shadow-float: 0 4px 16px rgba(0, 0, 0, 0.08);
+      }
+
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: var(--tc-font-family);
+        background: var(--tc-background);
+        color: var(--tc-foreground);
+        -webkit-font-smoothing: antialiased;
+        overflow-x: hidden;
+      }
+      .page {
+        max-width: 375px;
+        margin: 0 auto;
+        background: var(--tc-background);
+        position: relative;
+        min-height: 100vh;
+        padding-top: 61px;
+      }
+
+      .nav-bar {
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        max-width: 375px;
+        z-index: 50;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 16px;
+        background: var(--tc-card);
+        border-bottom: 1px solid var(--tc-border);
+        box-sizing: border-box;
+      }
+      .nav-bar .nav-title {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--tc-foreground);
+      }
+      .nav-icon-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        color: var(--tc-foreground);
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        text-decoration: none;
+      }
+
+      .section { padding: 20px; }
+      .section.light { background: var(--tc-light-bg); }
+      .section h2 {
+        margin: 0 0 16px;
+        font-size: 20px;
+        font-weight: 700;
+        color: var(--tc-foreground);
+      }
+
+      .content-img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: var(--tc-radius-lg);
+        margin-bottom: 14px;
+        cursor: zoom-in;
+      }
+      .content-img:last-child { margin-bottom: 0; }
+
+      .thumb-row {
+        display: flex;
+        gap: 8px;
+        margin-bottom: 14px;
+      }
+      .thumb-square {
+        flex: 1 1 0;
+        width: calc((100% - 16px) / 3);
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border-radius: var(--tc-radius-md);
+        display: block;
+        cursor: zoom-in;
+      }
+
+      @media (min-width: 1024px) {
+        .page { max-width: 960px; }
+        .nav-bar { max-width: 960px; }
+        .section { max-width: 430px; margin: 0 auto; }
+      }
+    </style>
+</head>
+<body>
+    <main>
+      <div class="page">
+        <nav class="nav-bar" aria-label="Course navigation">
+          <a class="nav-icon-btn" href="../index.html" aria-label="Back">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"></path><path d="m12 19-7-7 7-7"></path></svg>
+          </a>
+          <span class="nav-title">车载视觉</span>
+          <span style="width:36px"></span>
+        </nav>
+
+        <section class="section reveal">
+          <div class="thumb-row">
+            <img class="thumb-square" src="../assets/img/image_13_ya842o.gif" alt="User research interview" data-lightbox>
+            <img class="thumb-square" src="../assets/img/image_14_e65uev.gif" alt="User research data analysis" data-lightbox>
+            <img class="thumb-square" src="../assets/img/image_15_mcfq8g.gif" alt="User journey mapping" data-lightbox>
+          </div>
+          <img class="content-img" src="../assets/img/image_16_93qwpj.jpg" alt="User research workspace" data-lightbox>
+        </section>
+
+        <section class="section light reveal">
+          <img class="content-img" src="../assets/img/image_17_k25po1.jpg" alt="Research methods preview" data-lightbox>
+        </section>
+
+        <section class="section reveal">
+          <img class="content-img" src="../assets/img/image_18_yaipuq.jpg" alt="User research instructor" data-lightbox>
+        </section>
+      </div>
+    </main>
+
+    <button class="back-to-top" type="button" aria-label="返回顶部" data-back-to-top>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+    </button>
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
